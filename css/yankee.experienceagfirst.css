@@ -1,0 +1,51 @@
+/* Colours */
+.header {
+  background-color: #609638;
+  color: white;
+}
+
+.navigation a,
+.navigation a:hover {
+  color: white;
+}
+.navigation a:hover {
+  background-color: #4d782d;
+}
+
+/* Typography */
+.navigation a,
+.navigation a:hover {
+  text-decoration: none;
+}
+
+/* Mixins */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.header .logo {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.header .logo a {
+  display: inline-block;
+  width: 50%;
+}
+.header .navigation > a {
+  display: none;
+}
+.header .navigation ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.header .navigation li {
+  display: inline-block;
+}
+.header .navigation li > a {
+  display: inline-block;
+  padding: 3.45rem 1rem;
+}
+
+/*# sourceMappingURL=yankee.experienceagfirst.css.map */

@@ -1,0 +1,44 @@
+@import 'partials/_base';
+@import 'partials/_color';
+@import 'partials/_typography';
+@import 'helpers/mixins';
+
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+.header {
+	.logo {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+
+		a {
+			display: inline-block;
+			width: 50%;
+		}
+	}
+
+	.navigation {
+		> a {
+			display: none;
+		}
+
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+		}
+
+		li {
+			display: inline-block;
+
+			> a {
+				display: inline-block;
+				padding: 3.45rem 1rem;
+			}
+		}
+	}
+}

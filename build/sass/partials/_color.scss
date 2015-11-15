@@ -1,0 +1,18 @@
+/* Colours */
+
+
+.header {
+	background-color: $biostar-green;
+	color: $white;
+}
+
+.navigation {
+	a,
+	a:hover {
+		color: $white;
+	}
+
+	a:hover {
+		background-color: darken($biostar-green, 8%);
+	}
+}
