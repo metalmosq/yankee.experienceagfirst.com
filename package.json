@@ -1,0 +1,10 @@
+{
+  "name": "yankee.experienceagfirst.com",
+  "version": "0.1.0",
+  "description": "Experience AgFirst for Yankee Farm Credit",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
