@@ -15,10 +15,44 @@
 	a:hover {
 		background-color: darken($biostar-green, 8%);
 	}
+
+	.menu-mobile:hover {
+		background-color: transparent;
+	}
 }
 
 .section {
 	background-color: $light-gray;
+}
+
+.main {
+	.page-title {
+		color: $white;
+	}
+
+	.menu-aside {
+
+		a {
+			color: $dark-gray;
+		}
+
+		a:hover {
+			border-right-color: $biostar-green;
+			text-decoration: none;
+		}
+
+		color: $dark-gray;
+	}
+
+	.content {
+		h2 {
+			color: lighten($ag-blue, 6%);
+		}
+
+		p {
+			color: $dark-gray;
+		}
+	}
 }
 
 .cards {

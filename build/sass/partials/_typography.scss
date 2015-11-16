@@ -1,5 +1,13 @@
 /* Typography */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-stack-primary-header;
+}
 
 .navigation {
 
@@ -17,6 +25,12 @@
 	a,
 	a:hover {
 		text-decoration: none;
+	}
+}
+
+.main {
+	.menu-aside {
+		text-align: right;
 	}
 }
 
