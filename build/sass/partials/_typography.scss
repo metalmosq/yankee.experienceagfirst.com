@@ -2,6 +2,25 @@
 
 
 .navigation {
+
+	.menu-mobile {
+		font-size: 2.2rem;
+		line-height: 5.4rem;
+
+		&.toggled {
+			+ ul {
+				text-align: left;
+			}
+		}
+	}
+
+	a,
+	a:hover {
+		text-decoration: none;
+	}
+}
+
+.cards {
 	a,
 	a:hover {
 		text-decoration: none;
