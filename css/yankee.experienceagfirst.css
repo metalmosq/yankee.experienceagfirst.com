@@ -1,3 +1,4 @@
+/* Mixins */
 /* Sticky */
 html {
   position: relative;
@@ -84,9 +85,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Arial, sans-serif;
+  font-family: "Brandon-Grotesque", Arial, sans-serif;
 }
 
+.navigation {
+  font-family: "Brandon-Grotesque", Arial, sans-serif;
+}
 .navigation .menu-mobile {
   font-size: 2.2rem;
   line-height: 5.4rem;
@@ -94,21 +98,74 @@ h6 {
 .navigation .menu-mobile.toggled + ul {
   text-align: left;
 }
+.navigation ul {
+  font-size: 1.1em;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
 .navigation a,
 .navigation a:hover {
   text-decoration: none;
 }
 
+.main .page-title {
+  font-size: 1.6em;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+@media only screen and (min-width: 768px) {
+  .main .page-title {
+    font-size: 2em;
+  }
+}
 .main .menu-aside {
   text-align: right;
+  font-family: "Brandon-Grotesque", Arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.main .content {
+  font-family: Georgia, serif;
+}
+.main .content h2 {
+  font-family: "Brandon-Grotesque", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.7em;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
+.cards {
+  font-family: "Brandon-Grotesque", Arial, sans-serif;
+}
 .cards a,
 .cards a:hover {
   text-decoration: none;
 }
 
-/* Mixins */
+/* Kentico Stuff */
+.EditMode .page-title {
+  font-family: Arial, sans-serif !important;
+  background-color: transparent !important;
+  color: black !important;
+  font-weight: normal;
+  font-size: 1em;
+}
+.EditMode .page-title:after {
+  display: none !important;
+}
+.EditMode .content {
+  margin-top: -10rem !important;
+  position: absolute;
+  right: -7rem;
+  margin-bottom: 14rem;
+}
+.EditMode .footer {
+  display: none;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -196,7 +253,7 @@ img {
 }
 @media only screen and (min-width: 992px) {
   .header .logo a {
-    width: 201px;
+    width: 220px;
   }
 }
 .header .navigation {
@@ -257,6 +314,18 @@ img {
   background-color: #609638;
   z-index: -1;
   width: 100%;
+}
+.header.toggled + .row {
+  display: none;
+}
+.header.toggled + .row + .row {
+  display: none;
+}
+.header.toggled + .row + .row + .row {
+  display: none;
+}
+.header.toggled + .row + .row + .row + .row {
+  display: none;
 }
 
 @media only screen and (min-width: 1200px) {

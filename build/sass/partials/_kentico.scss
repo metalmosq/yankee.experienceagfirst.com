@@ -1,0 +1,28 @@
+/* Kentico Stuff */
+
+.EditMode {
+
+	.page-title {
+		font-family: Arial, sans-serif !important;
+		background-color: transparent !important;
+		color: black !important;
+		font-weight: normal;
+		font-size: 1em;
+
+		&:after {
+			display: none !important;
+		}
+	}
+
+	.content {
+		margin-top: -10rem !important;
+		position: absolute;
+		right: -7rem;
+		margin-bottom: 14rem;
+	}
+
+	.footer {
+		display: none;
+	}
+
+}

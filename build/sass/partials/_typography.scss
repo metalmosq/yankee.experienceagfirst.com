@@ -10,7 +10,7 @@ h6 {
 }
 
 .navigation {
-
+	font-family: $font-stack-primary-header;
 	.menu-mobile {
 		font-size: 2.2rem;
 		line-height: 5.4rem;
@@ -22,6 +22,12 @@ h6 {
 		}
 	}
 
+	ul {
+		font-size: 1.1em;
+		font-weight: 500;
+		letter-spacing: 0.05em;
+	}
+
 	a,
 	a:hover {
 		text-decoration: none;
@@ -29,12 +35,39 @@ h6 {
 }
 
 .main {
+	.page-title {
+		font-size: 1.6em;
+		font-weight: 300;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+
+		@include respond(screen-sm) {
+			font-size: 2em;
+		}
+	}
 	.menu-aside {
 		text-align: right;
+		font-family: $font-stack-primary-header;
+		font-size: 1.3em;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+
+	.content {
+		font-family: $font-stack-primary-body;
+
+		h2 {
+			font-family: $font-stack-primary-header;
+			font-weight: 400;
+			font-size: 1.7em;
+			text-transform: uppercase;
+			letter-spacing: 0.03em;
+		}
 	}
 }
 
 .cards {
+	font-family: $font-stack-primary-header;
 	a,
 	a:hover {
 		text-decoration: none;

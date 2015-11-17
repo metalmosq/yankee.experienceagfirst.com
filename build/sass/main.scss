@@ -1,10 +1,10 @@
+@import 'helpers/mixins';
 @import 'partials/_base';
 @import 'partials/_sticky';
 @import 'partials/_color';
 @import 'partials/_fonts';
 @import 'partials/_typography';
-@import 'helpers/mixins';
-
+@import 'partials/_kentico';
 
 img {
 	max-width: 100%;
@@ -75,7 +75,7 @@ img {
 				width: 201px;
 			}
 			@include respond(screen-md) {
-				width: 201px;
+				width: 220px;
 			}
 		}
 	}
@@ -148,6 +148,19 @@ img {
 			background-color: #609638;
 			z-index: -1;
 			width: 100%;
+		}
+
+		+ .row {
+			display: none;
+			+ .row {
+				display: none;
+				+ .row {
+					display: none;
+					+ .row {
+						display: none;
+					}
+				}
+			}
 		}
 	}
 }
