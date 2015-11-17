@@ -72,4 +72,11 @@ h6 {
 	a:hover {
 		text-decoration: none;
 	}
+
+	h2 {
+		> em {
+			font-weight: 100;
+			font-style: normal;
+		}
+	}
 }

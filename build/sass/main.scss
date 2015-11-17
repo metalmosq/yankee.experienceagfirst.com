@@ -322,20 +322,18 @@ img {
 		}
 	}
 
-	span {
+	h2 {
 		display: block;
+		padding: 2rem;
+		margin: 0;
+	}
 
-		&:first-of-type {
+	span {
+		display: none;
+
+		@include respond(screen-sm) {
+			display: block;
 			padding: 2rem;
-		}
-
-		&:last-of-type {
-			padding: 2rem;
-			display: none;
-
-			@include respond(screen-sm) {
-				display: block;
-			}
 		}
 	}
 
