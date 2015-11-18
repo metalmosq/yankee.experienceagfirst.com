@@ -228,7 +228,7 @@ img {
 		ul {
 			list-style-type: none;
 			padding: 0;
-			margin: 3.6rem 0 0 0;
+			margin: 2.2rem 0 0 0;
 		}
 
 		li {
@@ -243,18 +243,69 @@ img {
 	}
 
 	.content {
+		padding-top: 1.4rem;
+		margin-bottom: 9rem;
+
 		h2:first-of-type {
 			margin-top: 0;
 		}
 		p {
 			+ h2 {
-				margin-top: 3em;
+				margin-top: 2em;
+
+				&:first-of-type {
+					margin-top: 2em;
+				}
 			}
 
-			&:last-of-type {
-				margin-bottom: 9rem;
-			}
 		} 
+
+		ul {
+			+ h2 {
+				margin-top: 2em;
+			}
+		}
+
+		.schedule {
+
+			.schedule-block {
+				display: flex;
+				margin-bottom: 2.2em;
+				border-bottom-width: 1px;
+				border-bottom-style: solid;
+
+				+ h2 {
+					margin-top: 9rem;
+				}
+			}
+
+			.time {
+				padding: 1em;
+
+			}
+
+			li {
+				border-bottom: 1px solid;
+
+				&:last-of-type {
+					border: none;
+				}
+			}
+
+			.schedule-desc {
+				padding-right: 0;
+
+				ul {
+					padding:0;
+					margin: 0;
+					list-style-type: none;
+				}
+				li {
+					padding: 1em;
+				}
+
+			}
+		}
 	}
 }
 
@@ -359,6 +410,10 @@ img {
 	}
 
 
+}
+
+.qa {
+	margin-bottom: 6rem;
 }
 
 .footer {

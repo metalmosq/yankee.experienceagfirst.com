@@ -52,6 +52,23 @@
 		p {
 			color: $dark-gray;
 		}
+
+		.schedule {
+
+			.schedule-block {
+				border-bottom-color: $biostar-green;
+			}
+
+			.time {
+				color: $ag-blue;
+			}
+
+			.schedule-desc {
+				li {
+					border-bottom-color: $biostar-green;
+				}
+			}
+		}
 	}
 }
 

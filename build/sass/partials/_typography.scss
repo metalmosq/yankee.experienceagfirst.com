@@ -51,6 +51,13 @@ h6 {
 		font-size: 1.3em;
 		font-weight: 400;
 		text-transform: uppercase;
+
+		a,
+		a:hover,
+		a:active,
+		a:visited {
+			text-decoration: none;
+		}
 	}
 
 	.content {
@@ -62,6 +69,15 @@ h6 {
 			font-size: 1.7em;
 			text-transform: uppercase;
 			letter-spacing: 0.03em;
+		}
+
+		.schedule {
+			font-size: 1.2em;
+
+			.time {
+				font-family: $font-stack-primary-header;
+				text-align: right;
+			}
 		}
 	}
 }

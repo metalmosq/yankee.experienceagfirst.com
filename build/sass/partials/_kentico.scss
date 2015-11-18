@@ -17,8 +17,20 @@
 	.content {
 		margin-top: -10rem !important;
 		position: absolute;
-		right: -7rem;
+		right: 0;
 		margin-bottom: 14rem;
+	}
+
+	.main {
+		.content {
+			margin-top: -3rem !important;
+		}
+	}
+
+	.menu-aside {
+		+ .content {
+			right: -7rem;
+		}
 	}
 
 	.footer {
