@@ -1,0 +1,55 @@
+<div class="container-fluid">
+	<div class="login row">
+		<div class="container">
+
+
+			<div class="login-box col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+				<div class="row">
+					<div class="logo col-xs-8 col-xs-offset-2">
+						<img src="/YankeeFarmCreditExperienceAgfirst/media/images/agfirst-logo-color-2x.png">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-10 col-xs-offset-1 form-group">
+						<label>Username</label>
+						<asp:TextBox id="UsernameID" runat="server" class="form-control"/>
+						<span><asp:Label ID="UserNameLabel" runat="server" Visible="false" Text="Incorrect Username" /></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-10 col-xs-offset-1 form-group">
+						<label>Password</label>
+						<asp:TextBox id="PasswordID" TextMode="password" runat="server" class="form-control"/>
+						<span><asp:Label ID="PasswordLabel" runat="server" Visible="false" Text="Incorrect Password" /></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-10 col-xs-offset-1 form-group">
+						<asp:Button id="Button1" Text="Sign In" OnClick="Submit_Click" class="form-control btn btn-primary" runat="server"/>
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div>
+  <div>Username: <asp:TextBox id="UsernameID" runat="server" />
+   <asp:Label ID="UserNameLabel" runat="server" Visible="false" Text="Incorrect Username" />
+  </div>
+  <div>Password: <asp:TextBox id="PasswordID" TextMode="password" runat="server" />
+    <asp:Label ID="PasswordLabel" runat="server" Visible="false" Text="Incorrect Password" />
+  </div>
+   <div><asp:Button id="Button1" Text="submit" OnClick="Submit_Click" runat="server"/></div>
+</div>

@@ -416,6 +416,23 @@ img {
 	margin-bottom: 6rem;
 }
 
+.login {
+	margin-top: 25%;
+
+	.logo {
+		margin-bottom: 2.2rem;
+	}
+
+	.btn {
+		padding: 1.4em;
+		line-height: 0.2em;
+
+		@include respond(screen-md){
+			padding: 2em;
+		}
+	}
+}
+
 .footer {
 	min-height: 16rem;
 }

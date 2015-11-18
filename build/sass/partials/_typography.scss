@@ -96,3 +96,14 @@ h6 {
 		}
 	}
 }
+
+.btn {
+	font-family: $font-stack-primary-header;
+	font-weight: 400;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	&.btn-primary {
+
+	}
+}

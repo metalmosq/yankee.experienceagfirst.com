@@ -104,6 +104,20 @@
 	}
 }
 
+.btn {
+	&.btn-primary {
+		background-color: $biostar-green;
+		border-color: lighten($biostar-green, 4%);
+		color: $white;
+
+		&:hover,
+		&:active {
+			border-color: darken($biostar-green, 4%);
+			background-color: darken($biostar-green, 8%);
+		}
+	}
+}
+
 .footer {
 	background-color: $ag-sand;
 }

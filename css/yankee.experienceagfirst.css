@@ -83,6 +83,16 @@ body {
   color: white;
 }
 
+.btn.btn-primary {
+  background-color: #609638;
+  border-color: #6aa53e;
+  color: white;
+}
+.btn.btn-primary:hover, .btn.btn-primary:active {
+  border-color: #568732;
+  background-color: #4d782d;
+}
+
 .footer {
   background-color: #ddd49b;
 }
@@ -169,6 +179,14 @@ h6 {
 .cards h2 > em {
   font-weight: 100;
   font-style: normal;
+}
+
+.btn {
+  font-family: "Brandon-Grotesque", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 /* Kentico Stuff */
@@ -581,6 +599,22 @@ img {
 
 .qa {
   margin-bottom: 6rem;
+}
+
+.login {
+  margin-top: 25%;
+}
+.login .logo {
+  margin-bottom: 2.2rem;
+}
+.login .btn {
+  padding: 1.4em;
+  line-height: 0.2em;
+}
+@media only screen and (min-width: 992px) {
+  .login .btn {
+    padding: 2em;
+  }
 }
 
 .footer {
