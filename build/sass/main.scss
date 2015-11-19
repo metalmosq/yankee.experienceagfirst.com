@@ -128,7 +128,11 @@ img {
 
 			> a {
 				display: inline-block;
-				padding: 3.45rem 1.6rem;
+				padding: 2.8rem 1.6rem;
+
+				@include respond(screen-sm) {
+					padding: 3.45rem 1.6rem;
+				}
 			}
 		}
 	}
@@ -200,29 +204,37 @@ img {
 	.page-title {
 		position: relative;
 		background-color: $ag-blue;
-		margin: 0 -2.2rem 2.4rem 0;
+		margin: 0 -2.2rem 0.4rem 0;
 		padding: 1.25rem 2rem;
 		width: 100%;
 
 		@include respond(screen-sm) {
+			margin: 0 -2.2rem 2.4rem 0;
 			padding: 1.2rem 2rem;
 		}
 
+		+ div {
+			.menu-aside {
+				/*margin-top: -1rem;*/
+			}
+		}
+
 		&:after {
-			display: block;
-			content: ' ';
-			position: absolute;
-			right: 0;
-			top: 0;
-			width: 0;
-			height: 0;
-			border: solid 2.8rem;
-			border-left-color: $ag-blue;
-			border-right-color: $white;
-			border-bottom-color: $white;
-			border-top-color: $white;
+			display: none;
 
 			@include respond(screen-sm) {
+				display: block;
+				content: ' ';
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 0;
+				height: 0;
+				border: solid 2.8rem;
+				border-left-color: $ag-blue;
+				border-right-color: $white;
+				border-bottom-color: $white;
+				border-top-color: $white;
 				border-width: 3.2rem;
 			}
 		}
@@ -234,10 +246,14 @@ img {
 			display: block;
 		}
 		ul {
-			/*display: none;*/
+			display: none;
 			list-style-type: none;
 			padding: 0;
 			margin: 2.2rem 0 0 0;
+
+			@include respond(screen-sm) {
+				display: block;
+			}
 		}
 
 		li {
@@ -255,19 +271,28 @@ img {
 		}
 
 		.menu-mobile {
-			display: inline-block;
+			display: block;
 			position: absolute;
 			top: 0rem;
 			right: 0.4rem;
-			padding: 0.2rem 2.2rem;
-			z-index: 90;
+			padding: 1.6rem 2.2rem;
+			z-index: 19;
+			width: 100%;
 
 			@include respond(screen-sm)	 {
 				display: none;
 			}
 
+			span {
+				margin-right: 1.2rem;
+			}
+
 			&.toggled {
-				top: -2.8rem;
+				top: -4.6rem;
+
+				span {
+					display: none;
+				}
 			}
 		}
 
@@ -275,6 +300,13 @@ img {
 			ul {
 				display: block;
 				margin: 4.6rem 0 0 0;
+			}
+		}
+
+		+ .content {
+			padding-top: 7rem;
+			@include respond(screen-sm) {
+				padding-top: 1.4rem;
 			}
 		}
 	}
@@ -309,6 +341,14 @@ img {
 
 				+ h3 {
 					margin: 0.6em 0;
+				}
+			}
+
+			img {
+				margin-bottom: 2rem;
+
+				@include respond(screen-sm) {
+					margin-bottom: initial;
 				}
 			}
 		}
@@ -488,16 +528,36 @@ img {
 	padding: 1.2em 1.8em;
 }
 
+.qa-list {
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+	}
+
+	a {
+		display: block;
+		padding: 1rem 1.4rem;
+
+		&:hover,
+		&:active {
+			text-decoration:none;
+		}
+	}
+}
+
+
+
 .bio {
 	margin-bottom: 8rem;
     min-height: 34rem;
 }
 
 .login {
-	margin-top: 25%;
+	margin-top: 18vh;
 
 	.logo {
-		margin-bottom: 2.2rem;
+		margin-bottom: 2.8rem;
 	}
 
 	.btn {

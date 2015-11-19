@@ -40,7 +40,7 @@ body {
 
 .main {
 	.page-title {
-		font-size: 1.6em;
+		font-size: 1.5rem;
 		font-weight: 300;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
@@ -52,8 +52,8 @@ body {
 	.menu-aside {
 		text-align: right;
 		font-family: $font-stack-primary-header;
-		font-size: 1em;
-		font-weight: 500;
+		font-size: 1.1em;
+		font-weight: 400;
 		text-transform: uppercase;
 
 		&.toggled {
@@ -66,6 +66,13 @@ body {
 		a:active,
 		a:visited {
 			text-decoration: none;
+		}
+
+		.menu-mobile {
+			text-align: left;
+			&.toggled {
+				text-align: right;
+			}
 		}
 	}
 
@@ -147,6 +154,11 @@ body {
 	}
 }
 
+.qa-list {
+	font-family: $font-stack-primary-header;
+	font-size: 1.5em;
+}
+
 .footer {
 	.contact-info {
 
@@ -166,6 +178,15 @@ body {
 		font-weight: 300;
 		text-transform: uppercase;
 		text-decoration: none;
+	}
+}
+
+.login {
+	font-family: $font-stack-primary-header;
+	font-size: 2.2rem;
+
+	label {
+		font-weight: 300;
 	}
 }
 

@@ -42,13 +42,21 @@
 			text-decoration: none;
 		}
 
-		&.toggled {
-			a:hover {
-				border-right-color: transparent;
+		.menu-mobile {
+			border: none;
+			border-bottom: 1px dotted $light-gray;
+
+			&.toggled {
+				+ ul {
+					a:hover {
+						border: none;
+					}
+				}
 			}
 		}
 
 		color: $dark-gray;
+		fill: $dark-gray;
 	}
 
 	.content {
@@ -131,6 +139,16 @@
 .qa {
 	&:nth-of-type(even) {
 		background-color: lighten($light-gray, 4%);
+	}
+}
+
+.qa-list {
+	li:nth-of-type(even) {
+		background-color: lighten($light-gray, 4%);
+	}
+
+	a {
+		color: $ag-blue;
 	}
 }
 
