@@ -86,8 +86,8 @@ img {
 		.menu-mobile {
 			display: inline-block;
 			position: absolute;
-			top: -5.8rem;
-			right: 1.6rem;
+			top: -6.2rem;
+			right: 0.4rem;
 			padding: 0.2rem 2.2rem;
 
 			&.toggled {
@@ -201,8 +201,12 @@ img {
 		position: relative;
 		background-color: $ag-blue;
 		margin: 0 -2.2rem 2.4rem 0;
-		padding: 1.2rem 2rem;
+		padding: 1.25rem 2rem;
 		width: 100%;
+
+		@include respond(screen-sm) {
+			padding: 1.2rem 2rem;
+		}
 
 		&:after {
 			display: block;
@@ -212,20 +216,25 @@ img {
 			top: 0;
 			width: 0;
 			height: 0;
-			border: solid 3.2rem;
+			border: solid 2.8rem;
 			border-left-color: $ag-blue;
 			border-right-color: $white;
 			border-bottom-color: $white;
 			border-top-color: $white;
+
+			@include respond(screen-sm) {
+				border-width: 3.2rem;
+			}
 		}
 	}
 
 	.menu-aside {
-		display: none;
+		display: block;
 		@include respond(screen-sm) {
 			display: block;
 		}
 		ul {
+			/*display: none;*/
 			list-style-type: none;
 			padding: 0;
 			margin: 2.2rem 0 0 0;
@@ -237,8 +246,36 @@ img {
 
 		a {
 			display: block;
-			padding: 1rem;
+			padding: 0.76rem;
 			border-right: 4px solid transparent;
+
+			&.toggled {
+				border: none;
+			}
+		}
+
+		.menu-mobile {
+			display: inline-block;
+			position: absolute;
+			top: 0rem;
+			right: 0.4rem;
+			padding: 0.2rem 2.2rem;
+			z-index: 90;
+
+			@include respond(screen-sm)	 {
+				display: none;
+			}
+
+			&.toggled {
+				top: -2.8rem;
+			}
+		}
+
+		&.toggled {
+			ul {
+				display: block;
+				margin: 4.6rem 0 0 0;
+			}
 		}
 	}
 
@@ -263,6 +300,16 @@ img {
 		ul {
 			+ h2 {
 				margin-top: 2em;
+			}
+		}
+
+		.bio {
+			h2 {
+				margin: 0;
+
+				+ h3 {
+					margin: 0.6em 0;
+				}
 			}
 		}
 
@@ -306,8 +353,32 @@ img {
 
 			}
 		}
+
+		table {
+			width: 100%;
+
+			tr {
+				border-bottom-width: 1px;
+				border-bottom-style: solid;
+			}
+
+			th {
+				&:first-of-type {
+					padding-right: 5em;
+				}
+			}
+
+			td {
+				padding: 0.4em 0.6em;
+
+				&:first-of-type {
+					padding-right: 5em;
+				}
+			}
+		}
 	}
 }
+
 
 .cards {
 	margin: 0;
@@ -413,7 +484,13 @@ img {
 }
 
 .qa {
-	margin-bottom: 6rem;
+	margin-bottom: 2.2rem;
+	padding: 1.2em 1.8em;
+}
+
+.bio {
+	margin-bottom: 8rem;
+    min-height: 34rem;
 }
 
 .login {
@@ -434,5 +511,31 @@ img {
 }
 
 .footer {
-	min-height: 16rem;
+	min-height: 20rem;
+
+	.contact-info {
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 1em 1.6em;
+
+			a {
+				display: inline-block;
+
+			}
+		}
+	}
+
+	.tel {
+		pointer-events: auto;
+
+		@include respond(screen-sm) {
+			pointer-events: none;
+		}
+	}
+
+	.address-map {
+		display: inline-block;
+		padding: 1.6em;
+	}
 }

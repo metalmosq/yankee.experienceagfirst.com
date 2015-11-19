@@ -10,6 +10,7 @@
 	a,
 	a:hover {
 		color: $white;
+		fill: $white;
 	}
 
 	a:hover {
@@ -41,6 +42,12 @@
 			text-decoration: none;
 		}
 
+		&.toggled {
+			a:hover {
+				border-right-color: transparent;
+			}
+		}
+
 		color: $dark-gray;
 	}
 
@@ -67,6 +74,23 @@
 				li {
 					border-bottom-color: $biostar-green;
 				}
+			}
+		}
+	}
+
+	table {
+		width: 100%;
+
+		tr {
+			border-bottom-width: 1px;
+			border-bottom-style: solid;
+		}
+
+		td {
+			padding: 0.4em 0.6em;
+
+			&:first-of-type {
+				padding-right: 5em;
 			}
 		}
 	}
@@ -104,6 +128,12 @@
 	}
 }
 
+.qa {
+	&:nth-of-type(even) {
+		background-color: lighten($light-gray, 4%);
+	}
+}
+
 .btn {
 	&.btn-primary {
 		background-color: $biostar-green;
@@ -119,5 +149,15 @@
 }
 
 .footer {
-	background-color: $ag-sand;
+	background-color: $biostar-green;
+	color: $white;
+
+	a,
+	a:hover {
+		color: $white;
+	}
+
+	.address-map {
+		border-bottom-color: $white;
+	}
 }

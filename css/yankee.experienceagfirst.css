@@ -6,14 +6,14 @@ html {
 }
 
 body {
-  margin-bottom: 16rem;
+  margin-bottom: 20rem;
 }
 
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 16rem;
+  height: 20rem;
 }
 
 /* Colours */
@@ -25,6 +25,7 @@ body {
 .navigation a,
 .navigation a:hover {
   color: white;
+  fill: white;
 }
 .navigation a:hover {
   background-color: #4d782d;
@@ -50,6 +51,9 @@ body {
   border-right-color: #609638;
   text-decoration: none;
 }
+.main .menu-aside.toggled a:hover {
+  border-right-color: transparent;
+}
 .main .content h2 {
   color: #12436d;
 }
@@ -64,6 +68,19 @@ body {
 }
 .main .content .schedule .schedule-desc li {
   border-bottom-color: #609638;
+}
+.main table {
+  width: 100%;
+}
+.main table tr {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+.main table td {
+  padding: 0.4em 0.6em;
+}
+.main table td:first-of-type {
+  padding-right: 5em;
 }
 
 .cards span {
@@ -83,6 +100,10 @@ body {
   color: white;
 }
 
+.qa:nth-of-type(even) {
+  background-color: #ebebeb;
+}
+
 .btn.btn-primary {
   background-color: #609638;
   border-color: #6aa53e;
@@ -94,7 +115,15 @@ body {
 }
 
 .footer {
-  background-color: #ddd49b;
+  background-color: #609638;
+  color: white;
+}
+.footer a,
+.footer a:hover {
+  color: white;
+}
+.footer .address-map {
+  border-bottom-color: white;
 }
 
 /* Typography */
@@ -105,6 +134,10 @@ h4,
 h5,
 h6 {
   font-family: "Brandon-Grotesque", Helvetica, sans-serif;
+}
+
+body {
+  font-family: Georgia, serif;
 }
 
 .navigation {
@@ -141,9 +174,13 @@ h6 {
 .main .menu-aside {
   text-align: right;
   font-family: "Brandon-Grotesque", Helvetica, sans-serif;
-  font-size: 1.3em;
-  font-weight: 400;
+  font-size: 1em;
+  font-weight: 500;
   text-transform: uppercase;
+}
+.main .menu-aside.toggled {
+  text-align: left;
+  font-size: 1.1em;
 }
 .main .menu-aside a,
 .main .menu-aside a:hover,
@@ -153,6 +190,8 @@ h6 {
 }
 .main .content {
   font-family: Georgia, serif;
+  font-size: 1.3em;
+  line-height: 1.6em;
 }
 .main .content h2 {
   font-family: "Brandon-Grotesque", Helvetica, sans-serif;
@@ -161,11 +200,27 @@ h6 {
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
+.main .content h3 {
+  font-weight: 300;
+  font-size: 1.3em;
+}
 .main .content .schedule {
   font-size: 1.2em;
 }
 .main .content .schedule .time {
   font-family: "Brandon-Grotesque", Helvetica, sans-serif;
+  text-align: right;
+}
+.main .content table th:first-of-type {
+  text-align: right;
+}
+.main .content table th:last-of-type {
+  text-align: left;
+}
+.main .content table tr {
+  border-bottom-color: #609638;
+}
+.main .content table td:first-of-type {
   text-align: right;
 }
 
@@ -176,9 +231,36 @@ h6 {
 .cards a:hover {
   text-decoration: none;
 }
+.cards h2 {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
 .cards h2 > em {
   font-weight: 100;
   font-style: normal;
+}
+.cards span {
+  font-size: 1em;
+}
+@media only screen and (min-width: 992px) {
+  .cards span {
+    font-size: 1.2em;
+  }
+}
+
+.footer .contact-info {
+  font-family: "Brandon-Grotesque", Helvetica, sans-serif;
+  text-align: right;
+}
+.footer .contact-info ul {
+  font-size: 1.3em;
+  font-weight: 300;
+}
+.footer .address-map {
+  font-size: 1.1em;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .btn {
@@ -312,8 +394,8 @@ img {
 .header .navigation .menu-mobile {
   display: inline-block;
   position: absolute;
-  top: -5.8rem;
-  right: 1.6rem;
+  top: -6.2rem;
+  right: 0.4rem;
   padding: 0.2rem 2.2rem;
 }
 .header .navigation .menu-mobile.toggled + ul {
@@ -413,8 +495,13 @@ img {
   position: relative;
   background-color: #0e3353;
   margin: 0 -2.2rem 2.4rem 0;
-  padding: 1.2rem 2rem;
+  padding: 1.25rem 2rem;
   width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .main .page-title {
+    padding: 1.2rem 2rem;
+  }
 }
 .main .page-title:after {
   display: block;
@@ -424,14 +511,19 @@ img {
   top: 0;
   width: 0;
   height: 0;
-  border: solid 3.2rem;
+  border: solid 2.8rem;
   border-left-color: #0e3353;
   border-right-color: white;
   border-bottom-color: white;
   border-top-color: white;
 }
+@media only screen and (min-width: 768px) {
+  .main .page-title:after {
+    border-width: 3.2rem;
+  }
+}
 .main .menu-aside {
-  display: none;
+  display: block;
 }
 @media only screen and (min-width: 768px) {
   .main .menu-aside {
@@ -439,6 +531,7 @@ img {
   }
 }
 .main .menu-aside ul {
+  /*display: none;*/
   list-style-type: none;
   padding: 0;
   margin: 2.2rem 0 0 0;
@@ -448,8 +541,31 @@ img {
 }
 .main .menu-aside a {
   display: block;
-  padding: 1rem;
+  padding: 0.76rem;
   border-right: 4px solid transparent;
+}
+.main .menu-aside a.toggled {
+  border: none;
+}
+.main .menu-aside .menu-mobile {
+  display: inline-block;
+  position: absolute;
+  top: 0rem;
+  right: 0.4rem;
+  padding: 0.2rem 2.2rem;
+  z-index: 90;
+}
+@media only screen and (min-width: 768px) {
+  .main .menu-aside .menu-mobile {
+    display: none;
+  }
+}
+.main .menu-aside .menu-mobile.toggled {
+  top: -2.8rem;
+}
+.main .menu-aside.toggled ul {
+  display: block;
+  margin: 4.6rem 0 0 0;
 }
 .main .content {
   padding-top: 1.4rem;
@@ -466,6 +582,12 @@ img {
 }
 .main .content ul + h2 {
   margin-top: 2em;
+}
+.main .content .bio h2 {
+  margin: 0;
+}
+.main .content .bio h2 + h3 {
+  margin: 0.6em 0;
 }
 .main .content .schedule .schedule-block {
   display: flex;
@@ -495,6 +617,22 @@ img {
 }
 .main .content .schedule .schedule-desc li {
   padding: 1em;
+}
+.main .content table {
+  width: 100%;
+}
+.main .content table tr {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+.main .content table th:first-of-type {
+  padding-right: 5em;
+}
+.main .content table td {
+  padding: 0.4em 0.6em;
+}
+.main .content table td:first-of-type {
+  padding-right: 5em;
 }
 
 .cards {
@@ -598,7 +736,13 @@ img {
 }
 
 .qa {
-  margin-bottom: 6rem;
+  margin-bottom: 2.2rem;
+  padding: 1.2em 1.8em;
+}
+
+.bio {
+  margin-bottom: 8rem;
+  min-height: 34rem;
 }
 
 .login {
@@ -618,7 +762,27 @@ img {
 }
 
 .footer {
-  min-height: 16rem;
+  min-height: 20rem;
+}
+.footer .contact-info ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 1em 1.6em;
+}
+.footer .contact-info ul a {
+  display: inline-block;
+}
+.footer .tel {
+  pointer-events: auto;
+}
+@media only screen and (min-width: 768px) {
+  .footer .tel {
+    pointer-events: none;
+  }
+}
+.footer .address-map {
+  display: inline-block;
+  padding: 1.6em;
 }
 
 /*# sourceMappingURL=yankee.experienceagfirst.css.map */
