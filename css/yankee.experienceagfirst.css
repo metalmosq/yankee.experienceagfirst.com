@@ -1,22 +1,35 @@
 /* Mixins */
 /* Sticky */
-html {
-  position: relative;
-  min-height: 100%;
+@media only screen and (min-width: 768px) {
+  html {
+    position: relative;
+    min-height: 100%;
+  }
 }
 
-body {
-  margin-bottom: 20rem;
+@media only screen and (min-width: 768px) {
+  body {
+    margin-bottom: 20rem;
+  }
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 20rem;
+@media only screen and (min-width: 768px) {
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20rem;
+  }
 }
 
 /* Colours */
+body {
+  /*background-color: $biostar-green;
+  @include respond(screen-sm) {
+  	background-color: $white;
+  }*/
+}
+
 .header {
   background-color: #609638;
   color: white;
@@ -36,6 +49,14 @@ body {
 
 .section {
   background-color: #e1e1e1;
+  background-image: url("/YankeeFarmCreditExperienceAgfirst/media/images/binder-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (min-width: 1200px) {
+  .section {
+    background-position-y: -6rem;
+  }
 }
 
 .main .page-title {
@@ -96,10 +117,10 @@ body {
   background-color: #0e3353;
 }
 .cards li:nth-of-type(2) h2 {
-  background-color: #cf5d2d;
+  background-color: #609638;
 }
 .cards li:nth-of-type(3) h2 {
-  background-color: #609638;
+  background-color: #cf5d2d;
 }
 .cards h2 {
   color: white;
@@ -114,6 +135,22 @@ body {
 }
 .qa-list a {
   color: #0e3353;
+}
+
+.bio ul a {
+  color: #568732;
+  background-color: #ebebeb;
+}
+@media only screen and (min-width: 768px) {
+  .bio ul a {
+    background-color: transparent;
+    color: #337ab7;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .bio ul .tel {
+    color: inherit;
+  }
 }
 
 .btn.btn-primary {
@@ -170,6 +207,18 @@ body {
 .navigation a,
 .navigation a:hover {
   text-decoration: none;
+}
+
+.section h1 {
+  font-weight: 400;
+}
+.section p {
+  font-size: 1.1em;
+}
+@media only screen and (min-width: 992px) {
+  .section p {
+    font-size: 1.3em;
+  }
 }
 
 .main .page-title {
@@ -266,6 +315,19 @@ body {
   }
 }
 
+.bio ul a {
+  font-family: "Brandon-Grotesque", Helvetica, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+}
+@media only screen and (min-width: 768px) {
+  .bio ul a:hover {
+    text-decoration: underline;
+  }
+}
+
 .qa-list {
   font-family: "Brandon-Grotesque", Helvetica, sans-serif;
   font-size: 1.5em;
@@ -283,6 +345,10 @@ body {
   font-size: 1.1em;
   font-weight: 300;
   text-transform: uppercase;
+  text-decoration: none;
+}
+
+.history-back:hover {
   text-decoration: none;
 }
 
@@ -522,7 +588,7 @@ img {
 }
 @media only screen and (min-width: 1200px) {
   .section {
-    padding: 2.8rem 3.2rem;
+    padding: 5rem 4.6rem;
     margin-bottom: 1.2rem;
   }
 }
@@ -632,6 +698,13 @@ img {
   padding-top: 1.4rem;
   margin-bottom: 9rem;
 }
+.main .content .history-back {
+  margin-bottom: 0.1em;
+  border-bottom: 1px dotted;
+}
+.main .content .history-back + h2 {
+  margin-top: 12rem;
+}
 .main .content h2:first-of-type {
   margin-top: 0;
 }
@@ -704,8 +777,10 @@ img {
   padding-right: 5em;
 }
 
-.cards {
-  margin: 0;
+@media only screen and (min-width: 768px) {
+  .cards {
+    margin: 0;
+  }
 }
 @media only screen and (min-width: 768px) {
   .cards {
@@ -806,7 +881,7 @@ img {
 
 .qa {
   margin-bottom: 2.2rem;
-  padding: 1.2em 1.8em;
+  padding: 1.2em 1.8em 2.8em;
 }
 
 .qa-list ul {
@@ -826,9 +901,64 @@ img {
   margin-bottom: 8rem;
   min-height: 34rem;
 }
+.bio ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.bio ul a {
+  display: block;
+  padding: 1em;
+}
+@media only screen and (min-width: 768px) {
+  .bio ul a {
+    display: inline-block;
+    padding: 0.1em;
+  }
+}
+.bio ul:after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+.bio li {
+  float: left;
+  width: 48%;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .bio li {
+    float: none;
+    width: auto;
+    text-align: left;
+    display: inline;
+  }
+}
+.bio li:first-of-type {
+  margin-right: 0;
+}
+.bio li:last-of-type {
+  margin-left: 0.5em;
+}
+@media only screen and (min-width: 768px) {
+  .bio li:last-of-type:before {
+    display: inline-block;
+    content: '|';
+    margin-right: 0.5em;
+  }
+}
+
+.history-back {
+  float: right;
+}
 
 .login {
   margin-top: 18vh;
+}
+.login .login-box {
+  opacity: 0;
+  -webkit-transition: 0.4s cubic-bezier(0.46, 0.01, 0.82, 0) opacity;
+  transition: 0.4s cubic-bezier(0.46, 0.01, 0.82, 0) opacity;
 }
 .login .logo {
   margin-bottom: 2.8rem;
@@ -839,7 +969,20 @@ img {
 }
 @media only screen and (min-width: 992px) {
   .login .btn {
-    padding: 2em;
+    padding: 1.2em;
+  }
+}
+
+.load .login-box {
+  opacity: 1;
+}
+
+.tel {
+  pointer-events: auto;
+}
+@media only screen and (min-width: 768px) {
+  .tel {
+    pointer-events: none;
   }
 }
 
@@ -853,14 +996,6 @@ img {
 }
 .footer .contact-info ul a {
   display: inline-block;
-}
-.footer .tel {
-  pointer-events: auto;
-}
-@media only screen and (min-width: 768px) {
-  .footer .tel {
-    pointer-events: none;
-  }
 }
 .footer .address-map {
   display: inline-block;

@@ -195,7 +195,7 @@ img {
 	}
 
 	@include respond(screen-lg) {
-		padding: 2.8rem 3.2rem;
+		padding: 5rem 4.6rem;
 		margin-bottom: 1.2rem;
 	}
 }
@@ -315,6 +315,15 @@ img {
 		padding-top: 1.4rem;
 		margin-bottom: 9rem;
 
+		.history-back {
+			margin-bottom: 0.1em;
+			border-bottom: 1px dotted;
+
+			+ h2 {
+				margin-top: 12rem;
+			}
+		}
+
 		h2:first-of-type {
 			margin-top: 0;
 		}
@@ -336,6 +345,7 @@ img {
 		}
 
 		.bio {
+
 			h2 {
 				margin: 0;
 
@@ -421,7 +431,10 @@ img {
 
 
 .cards {
-	margin: 0;
+	
+	@include respond(screen-sm) {
+		margin: 0;
+	}
 
 	@include respond(screen-sm) {
 		margin: 6.2rem 0;
@@ -525,7 +538,7 @@ img {
 
 .qa {
 	margin-bottom: 2.2rem;
-	padding: 1.2em 1.8em;
+	padding: 1.2em 1.8em 2.8em;
 }
 
 .qa-list {
@@ -551,10 +564,71 @@ img {
 .bio {
 	margin-bottom: 8rem;
     min-height: 34rem;
+
+    ul {
+    	margin: 0;
+    	padding: 0;
+    	list-style-type: none;
+
+    	a {
+    		display: block;
+    		padding: 1em;
+
+    		@include respond(screen-sm) {
+    			display: inline-block;
+    			padding: 0.1em;
+    		}
+    	}
+
+    	&:after {
+    		content: ' ';
+    		display: table;
+    		clear: both;
+    	}
+    }
+
+    li {
+    	float: left;
+    	width: 48%;
+    	text-align: center;
+
+    	@include respond(screen-sm) {
+    		float: none;
+    		width: auto;
+    		text-align: left;
+    		display: inline;
+    	}
+
+    	&:first-of-type {
+    		margin-right: 0;
+    	}
+
+    	&:last-of-type {
+    		margin-left: 0.5em;
+
+    		&:before {
+    			@include respond(screen-sm) {
+	    			display: inline-block;
+	    			content: '|';
+	    			margin-right: 0.5em;
+	    		}
+    		}
+    	}
+    }
+}
+
+.history-back {
+	float: right;
 }
 
 .login {
 	margin-top: 18vh;
+
+	.login-box {
+		opacity: 0;
+		-webkit-transition: 0.4s cubic-bezier(0.46, 0.01, 0.82, 0) opacity;
+		transition: 0.4s cubic-bezier(0.46, 0.01, 0.82, 0) opacity;
+	}
 
 	.logo {
 		margin-bottom: 2.8rem;
@@ -565,8 +639,22 @@ img {
 		line-height: 0.2em;
 
 		@include respond(screen-md){
-			padding: 2em;
+			padding: 1.2em;
 		}
+	}
+}
+
+.load {
+	.login-box {
+		opacity: 1;
+	}
+}
+
+.tel {
+	pointer-events: auto;
+
+	@include respond(screen-sm) {
+		pointer-events: none;
 	}
 }
 
@@ -586,13 +674,6 @@ img {
 		}
 	}
 
-	.tel {
-		pointer-events: auto;
-
-		@include respond(screen-sm) {
-			pointer-events: none;
-		}
-	}
 
 	.address-map {
 		display: inline-block;

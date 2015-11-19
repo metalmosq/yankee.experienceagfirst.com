@@ -38,6 +38,19 @@ body {
 	}
 }
 
+.section {
+	h1 {
+		font-weight: 400;
+	}
+	p {
+		font-size: 1.1em;
+
+		@include respond(screen-md) {
+			font-size: 1.3em;
+		}
+	}
+}
+
 .main {
 	.page-title {
 		font-size: 1.5rem;
@@ -154,6 +167,24 @@ body {
 	}
 }
 
+.bio {
+	ul {
+		a {
+			font-family: $font-stack-primary-header;
+			font-weight: 400;
+			text-transform: uppercase;
+			letter-spacing: 0.01em;
+			text-decoration: none;
+
+			&:hover {
+				@include respond(screen-sm) {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
 .qa-list {
 	font-family: $font-stack-primary-header;
 	font-size: 1.5em;
@@ -177,6 +208,12 @@ body {
 		font-size: 1.1em;
 		font-weight: 300;
 		text-transform: uppercase;
+		text-decoration: none;
+	}
+}
+
+.history-back {
+	&:hover {
 		text-decoration: none;
 	}
 }

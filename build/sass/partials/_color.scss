@@ -1,5 +1,11 @@
 /* Colours */
 
+body {
+	/*background-color: $biostar-green;
+	@include respond(screen-sm) {
+		background-color: $white;
+	}*/
+}
 
 .header {
 	background-color: $biostar-green;
@@ -24,6 +30,13 @@
 
 .section {
 	background-color: $light-gray;
+	background-image: url("/YankeeFarmCreditExperienceAgfirst/media/images/binder-background.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+
+    @include respond(screen-lg) {
+    	background-position-y: -6rem;
+    }
 }
 
 .main {
@@ -120,13 +133,13 @@
 
 		&:nth-of-type(2) {
 			h2 {
-				background-color: $ag-rust;
+				background-color: $biostar-green;
 			}
 		}
 
 		&:nth-of-type(3) {
 			h2 {
-				background-color: $biostar-green;
+				background-color: $ag-rust;
 			}
 		}
 	}
@@ -149,6 +162,27 @@
 
 	a {
 		color: $ag-blue;
+	}
+}
+
+.bio {
+	ul {
+		a {
+			color: darken($biostar-green, 4%);
+			background-color: lighten($light-gray, 4%);
+
+			@include respond(screen-sm) {
+				background-color: transparent;
+				color: $bootstrap-link-blue;
+
+			}
+		}
+
+		.tel {
+			@include respond(screen-sm) {
+				color: inherit;
+			}
+		}
 	}
 }
 
