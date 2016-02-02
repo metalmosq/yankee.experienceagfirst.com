@@ -494,6 +494,8 @@ img {
 
 		@include respond(screen-sm) {
 			display: inline-block;
+			-webkit-transition: 0.13s cubic-bezier(0.39, 0.58, 0.57, 1) box-shadow;
+			transition: 0.13s cubic-bezier(0.39, 0.58, 0.57, 1) box-shadow;
 		}
 	}
 

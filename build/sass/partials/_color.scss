@@ -30,7 +30,7 @@ body {
 
 .section {
 	background-color: $light-gray;
-	background-image: url("/YankeeFarmCreditExperienceAgfirst/media/images/binder-background.jpg");
+	background-image: url("/Experience_Agfirst/media/images/binder-background.jpg");
     background-repeat: no-repeat;
     background-size:cover;
 
@@ -146,6 +146,18 @@ body {
 
 	h2 {
 		color: $white;
+	}
+
+	a {
+
+		@include respond(screen-sm) {
+			&:hover {
+				-webkit-box-shadow: 0px 14px 24px -18px $black-shadow-1, 0px 0px 4px $black-shadow-2;
+				-moz-box-shadow: 0px 14px 24px -18px $black-shadow-1, 0px 0px 4px $black-shadow-2;
+				-o-box-shadow: 0px 14px 24px -18px $black-shadow-1, 0px 0px 4px $black-shadow-2;
+				box-shadow: 0px 14px 24px -18px $black-shadow-1, 0px 0px 4px $black-shadow-2; 
+			}
+		}
 	}
 }
 
